@@ -1,0 +1,11 @@
+package com.example.algamoney.api.repository.pessoa;
+
+import java.util.List;
+
+import com.example.algamoney.api.model.Lancamento;
+
+public interface PessoaRepositoryQuery {
+
+	public List<Lancamento> filtrarByNome();
+	
+}

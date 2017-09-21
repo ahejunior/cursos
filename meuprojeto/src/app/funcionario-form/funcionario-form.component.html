@@ -1,0 +1,21 @@
+<div>
+  <h1>{{ nome | uppercase }}</h1>
+  <h1>{{ dataAtual | date:'dd/MM/y' }}</h1>
+  <h1>{{ preco | number:'1.2-2' }}</h1>
+  <h1>{{ troco | currency:'BRL':true:'1.2-2' }}</h1>
+</div>
+
+<div class="alert alert-success" role="alert" [hidden]="!adicionado">
+  Funcionário adicionado: <strong>{{nome}} - {{telefone}}</strong>
+</div>
+<div class="form-group">
+  <label >Nome</label>
+  <input type="text" class="form-control" #nomeInput value="{{nome}}"
+      (focus)="adicionado = false" appCampoColorido [cor]="'red'" #campo="campoColorido">
+  <label >Telefone</label>
+  <input type="text" class="form-control" [(ngModel)]="telefone" appCampoColorido >
+</div>
+<button type="button" class="btn btn-primary" (click)="adicionar(nomeInput.value)" [disabled]="telefone.length == 0">Adicionar</button>
+
+<button class="btn btn-info" (click)="campo.colorir()">Colorir</button>
+<button class="btn btn-info" (click)="campo.descolorir()">Descolorir</button>

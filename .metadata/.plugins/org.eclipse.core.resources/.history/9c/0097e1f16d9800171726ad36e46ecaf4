@@ -1,0 +1,15 @@
+package com.example.algamoney.api.repository.pessoa;
+
+import java.util.List;
+
+import com.example.algamoney.api.model.Lancamento;
+
+public class PessoaRepositoryImpl implements PessoaRepositoryQuery {
+
+	@Override
+	public List<Lancamento> filtrarByNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

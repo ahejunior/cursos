@@ -1,0 +1,5 @@
+package com.example.algamoney.api.config.token;
+
+public class CustomTokenEnhacer {
+
+}
